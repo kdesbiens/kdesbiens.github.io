@@ -11,7 +11,7 @@
       </head>
 
 <body>
-    <p class="m-3">Sélectionner un type de service:</p> 
+    <b><p class="m-3">Sélectionner un type de service:</p></b>
     <div class="m-3">
         <form name="form1">
         <select class="form-control" name="select2" id="browsers" onchange="fifa()">
@@ -23,7 +23,7 @@
       </div>
 
 <textarea class="m-3" name="text1" id="copy" rows="12" cols="30" onclick="this.focus();this.select()" readonly="readonly"></textarea>
-<div class="m-3"> <button type="button" class="btn btn-info btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#copy">Copy</button>
+<div class="m-3"> <button type="button" class="btn btn-info btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#copy">Copier le texte</button>
 </form>
 
 </body>
@@ -36,9 +36,11 @@
         if (abc === "B")
             frm.text1.value = "Travail : Maintenance de bassin\n\nTemp. Concentration de glycol :\nTemp. du bassin :\nRadiateur soufflé au CO2 ? :\nQté. De glycol utilisé :\nQté. Dumper coupling utilisé :\nPompe en bon état ? :\nMoteur en bon état ? :\nAutre :";
         else if (abc === "C")
-            frm.text1.value = "You selected B";
-        else
-            frm.text1.value = "You selected C";
+            frm.text1.value = "Travail : Changement de main\n\nQté de main fait : \nQté de tuyau 3/8’’ utilisé : \nAutre : ";
+        else if (abc === "D")
+            frm.text1.value = "Travail : Réparation de bassin\n\nModèle bassin défect. : \n# série bassin défect. : \nDiagnostique : \nPièces utilisées : \nEst-ce que le bassin est réparé ? : ";
+        else 
+            frm.text1.value =""
     }
     </script>
 
