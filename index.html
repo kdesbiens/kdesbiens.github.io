@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <title>Template Fût Idéal</title>
+      </head>
+
+<body>
+    <h1 class="m-1">Template Fût Idéal</h1> <br/> 
+
+    <p class="m-3">Sélectionner un type de service:</p> 
+    <div class="m-3">
+        <form name="form1">
+        <select class="form-control" name="select2" id="browsers" onchange="fifa()">
+          <option value="A"></option>
+          <option value="B">Maintenance de bassin</option>
+          <option value="C">Changement de main</option>
+          <option value="D">Réparation de bassin </option>
+      </select>
+      </div>
+
+<textarea class="m-3" name="text1" id="copy" rows="12" cols="50" onclick="this.focus();this.select()" readonly="readonly"></textarea>
+<div class="m-3"> <button type="button" class="btn btn-info btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#copy">Copy</button>
+</form>
+
+</body>
+
+<script type="text/javascript">
+    function fifa()
+    {
+        var frm = document.forms[0];
+        var abc = frm.browsers.value;
+        if (abc === "B")
+            frm.text1.value = "Travail : Maintenance de bassin\n\nTemp. Concentration de glycol :\nTemp. du bassin :\nRadiateur soufflé au CO2 ? :\nQté. De glycol utilisé :\nQté. Dumper coupling utilisé :\nPompe en bon état ? :\nMoteur en bon état ? :\nAutre :";
+        else if (abc === "C")
+            frm.text1.value = "You selected B";
+        else
+            frm.text1.value = "You selected C";
+    }
+    </script>
+
+<script>
+new ClipboardJS('.btn');
+</script>
+
+
+</html>
