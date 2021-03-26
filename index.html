@@ -8,7 +8,17 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
         <title>Template Fût Idéal</title>
+
+
+        <style>
+        .alert {
+            display:none;
+        }
+        </style>
+
+
       </head>
+
 
 <body>
     <b><p class="m-3">Sélectionner un type de service:</p></b>
@@ -19,6 +29,7 @@
           <option value="B">Maintenance de bassin</option>
           <option value="C">Changement de main</option>
           <option value="D">Réparation de bassin </option>
+          <option value="E">Installation complète </option>
       </select>
       </div>
 
@@ -39,6 +50,8 @@
             frm.text1.value = "Travail : Changement de main\n\nQté de main fait : \nQté de tuyau 3/8’’ utilisé : \nAutre : ";
         else if (abc === "D")
             frm.text1.value = "Travail : Réparation de bassin\n\nModèle bassin défect. : \n# série bassin défect. : \nDiagnostique : \nPièces utilisées : \nEst-ce que le bassin est réparé ? : ";
+        else if (abc === "E") 
+            frm.text1.value = "Travail : Travail : Installation complète\n\nInstallation conforme en tout point au BT (oui/non) : \nDifférence avec le BT : \nTest de gaz : \nTest avec étanchéité des lignes : \n\nPièces non-utilisées : \nPièces utilisées en surplus : \nContact sur place lors de l’installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \n\nFrais de stationnement : \nAutres frais (divers): \n";
         else 
             frm.text1.value =""
     }
@@ -47,6 +60,5 @@
 <script>
 new ClipboardJS('.btn');
 </script>
-
 
 </html>
