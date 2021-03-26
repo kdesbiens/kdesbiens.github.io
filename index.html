@@ -30,6 +30,7 @@
           <option value="C">Changement de main</option>
           <option value="D">Réparation de bassin </option>
           <option value="E">Installation complète </option>
+          <option value="F">Appel de service </option>
       </select>
       </div>
 
@@ -45,13 +46,15 @@
         var frm = document.forms[0];
         var abc = frm.browsers.value;
         if (abc === "B")
-            frm.text1.value = "Travail : Maintenance de bassin\n\nTemp. Concentration de glycol :\nTemp. du bassin :\nRadiateur soufflé au CO2 ? :\nQté. De glycol utilisé :\nQté. Dumper coupling utilisé :\nPompe en bon état ? :\nMoteur en bon état ? :\nAutre :";
+            frm.text1.value = "Travail : Maintenance de bassin\n\nConcentration de glycol :\nTemp. du bassin :\nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) :\nQté. De glycol utilisé :\nQté. Dumper coupling utilisé :\nIsolation de pompe en bon état ? :\nPompe en bon état ? :\nMoteur en bon état ? :\nAutre :";
         else if (abc === "C")
-            frm.text1.value = "Travail : Changement de main\n\nQté de main fait : \nQté de tuyau 3/8’’ utilisé : \nAutre : ";
+            frm.text1.value = "Travail : Changement de main\n\nQté de main fait : \nQté de tuyau 3/8’’ utilisé : \nBrasserie et marque de bière (utiliser) :\nAutre : ";
         else if (abc === "D")
             frm.text1.value = "Travail : Réparation de bassin\n\nModèle bassin défect. : \n# série bassin défect. : \nDiagnostique : \nPièces utilisées : \nEst-ce que le bassin est réparé ? : ";
         else if (abc === "E") 
-            frm.text1.value = "Travail : Travail : Installation complète\n\nInstallation conforme en tout point au BT (oui/non) : \nDifférence avec le BT : \nTest de gaz : \nTest avec étanchéité des lignes : \n\nPièces non-utilisées : \nPièces utilisées en surplus : \nContact sur place lors de l’installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \n\nFrais de stationnement : \nAutres frais (divers): \n";
+            frm.text1.value = "Travail : Installation complète\n\nInstallation conforme en tout point au BT (oui/non) : \nDifférence avec le BT : \nTest de gaz : \nTest avec étanchéité des lignes : \n\nPièces non-utilisées : \nPièces utilisées en surplus : \nContact sur place lors de l’installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \n\nFrais de stationnement : \nAutres frais (divers): \n";
+        else if (abc === "F") 
+            frm.text1.value = "Travail : Appel de service \n\nProblème : \nDiagnostique : \nSolution apportée : \n\nPièces utilisées : \n"
         else 
             frm.text1.value =""
     }
